@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 const fileFormSchema = z.object({
-  file: "",
+  file: z.string(),
 });
 
 const PasteTextForm = () => {
