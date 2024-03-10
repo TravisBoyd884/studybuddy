@@ -56,7 +56,12 @@ const QuizPage = () => {
         answers[i]?.element.classList.add("bg-primary-500");
         setScore((prev) => prev + 1);
       } else {
-        answers[i]?.element.classList.add("bg-red-500");
+        answers[i]?.element.classList.add(
+          "border-2",
+          "border-red-500",
+          "border-solid",
+          "bg-red-100",
+        );
         for (let index = 0; index < 4; index++) {
           if (
             answers[i]?.element.parentElement.parentElement.children[0]
@@ -128,18 +133,14 @@ const QuizPage = () => {
               <div className="flex flex-col gap-3">
                 <RadioGroup>
                   <div
-
-                    // className={`flex items-center gap-2 ${answers[item.id]?.answer == item.correct ? "bg-green-100" : "bg-red-100"}`}
                     className="flex items-center gap-2 rounded-xl p-2"
-
                     onClick={(e) => handleSelect(e)}
                   >
                     <RadioGroupItem value="a" id="a" />
                     <Label htmlFor="a">{item.options.a}</Label>
                   </div>
                   <div
-                  className="flex items-center gap-2 rounded-xl p-2"
-
+                    className="flex items-center gap-2 rounded-xl p-2"
                     onClick={(e) => handleSelect(e)}
                   >
                     <RadioGroupItem value="b" id="b" />
@@ -147,7 +148,6 @@ const QuizPage = () => {
                   </div>
                   <div
                     className="flex items-center gap-2 rounded-xl p-2"
-
                     onClick={(e) => handleSelect(e)}
                   >
                     <RadioGroupItem value="c" id="c" />
@@ -155,7 +155,6 @@ const QuizPage = () => {
                   </div>
                   <div
                     className="flex items-center gap-2 rounded-xl p-2"
-
                     onClick={(e) => handleSelect(e)}
                   >
                     <RadioGroupItem value="d" id="d" />

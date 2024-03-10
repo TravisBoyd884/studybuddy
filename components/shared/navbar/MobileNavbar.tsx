@@ -75,18 +75,9 @@ const MobileNavbar = () => {
 
           <div className="flex flex-col gap-3">
             <SheetClose asChild>
-              <Link href="/sign-in">
+              <Link href="/login">
                 <Button className="small-medium btn-secondary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
-                  <span className="invert-0 dark:text-primary-500">Log In</span>
-                </Button>
-              </Link>
-            </SheetClose>
-            <SheetClose asChild>
-              <Link href="/sign-up">
-                <Button className="small-medium light-border-2 btn-tertiary text-dark400_light900 min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
-                  <span className="invert-0 dark:text-primary-500">
-                    Sign Up
-                  </span>
+                  <span className="invert-0 dark:text-primary-500">Logout</span>
                 </Button>
               </Link>
             </SheetClose>

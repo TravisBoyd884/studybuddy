@@ -18,14 +18,6 @@ const SideBarContent = () => {
           (pathname.includes(item.route) && item.route.length > 1) ||
           pathname === item.route;
 
-        // if (item.route === "/profile") {
-        //   if (userId) {
-        //     item.route = `${item.route}/${userId}`;
-        //   } else {
-        //     return null;
-        //   }
-        // }
-
         return (
           <Link
             href={item.route}
@@ -36,7 +28,13 @@ const SideBarContent = () => {
                 : "bg-transparent text-dark-300"
             } flex items-center justify-start gap-4 p-4`}
           >
-            <Image src={item.imgURL} alt={item.label} width={20} height={20} className={`${isActive ? "invert" : "invert-0"}`} />
+            <Image
+              src={item.imgURL}
+              alt={item.label}
+              width={20}
+              height={20}
+              className={`${isActive ? "invert" : "invert-0"}`}
+            />
             <p
               className={`${
                 isActive ? "base-bold" : "base-medium"
